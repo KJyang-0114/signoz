@@ -248,6 +248,10 @@ export function getAppContextMock(
 			ee: 'Y',
 			setupCompleted: true,
 		},
+		authzResources: null,
+		authzResourcesFetchError: null,
+		isFetchingAuthzResources: false,
+
 		...appContextOverrides,
 	};
 }
