@@ -12,6 +12,7 @@ import {
 	generalSettings,
 	ingestionSettings,
 	keyboardShortcuts,
+	membersSettings,
 	multiIngestionSettings,
 	mySettings,
 	organizationSettings,
@@ -60,7 +61,7 @@ export const getRoutes = (
 	settings.push(...alertChannels(t));
 
 	if (isAdmin) {
-		settings.push(...apiKeys(t));
+		settings.push(...apiKeys(t), ...membersSettings(t));
 	}
 
 	if ((isCloudUser || isEnterpriseSelfHostedUser) && isAdmin) {

@@ -33,6 +33,7 @@ import {
 	Unplug,
 	User,
 	UserPlus,
+	Users,
 } from 'lucide-react';
 
 import { SecondaryMenuItemKey, SidebarItem } from './sideNav.types';
@@ -325,6 +326,13 @@ export const settingsMenuItems: SidebarItem[] = [
 		icon: <User size={16} />,
 		isEnabled: false,
 		itemKey: 'members-sso',
+	},
+	{
+		key: ROUTES.MEMBERS_SETTINGS,
+		label: 'Members',
+		icon: <Users size={16} />,
+		isEnabled: false,
+		itemKey: 'members',
 	},
 	{
 		key: ROUTES.CUSTOM_DOMAIN_SETTINGS,

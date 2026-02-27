@@ -27,8 +27,10 @@ import {
 	Plus,
 	Shield,
 	User,
+	Users,
 } from 'lucide-react';
 import ChannelsEdit from 'pages/ChannelsEdit';
+import MembersSettings from 'pages/MembersSettings';
 import Shortcuts from 'pages/Shortcuts';
 
 export const organizationSettings = (t: TFunction): RouteTabProps['routes'] => [
@@ -147,6 +149,19 @@ export const billingSettings = (t: TFunction): RouteTabProps['routes'] => [
 		),
 		route: ROUTES.BILLING,
 		key: ROUTES.BILLING,
+	},
+];
+
+export const membersSettings = (t: TFunction): RouteTabProps['routes'] => [
+	{
+		Component: MembersSettings,
+		name: (
+			<div className="periscope-tab">
+				<Users size={16} /> {t('routes:members').toString()}
+			</div>
+		),
+		route: ROUTES.MEMBERS_SETTINGS,
+		key: ROUTES.MEMBERS_SETTINGS,
 	},
 ];
 
