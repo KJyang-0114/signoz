@@ -120,7 +120,6 @@ function SettingsPage(): JSX.Element {
 				}
 
 				if (isEditor) {
-					// eslint-disable-next-line sonarjs/no-identical-functions
 					updatedItems = updatedItems.map((item) => ({
 						...item,
 						isEnabled:
